@@ -1,0 +1,29 @@
+{
+  "name": "Backend-list",
+  "version": "1.0.0",
+  "description": "BackEnd to list products according to their relevance",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "dev": "nodemon src --exec babel-node",
+    "devs": "nodemon build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcamilofarfan/Backend-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcamilofarfan/Backend-list/issues"
+  },
+  "homepage": "https://github.com/jcamilofarfan/Backend-list#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "nodemon": "^2.0.12"
+  }
+}
