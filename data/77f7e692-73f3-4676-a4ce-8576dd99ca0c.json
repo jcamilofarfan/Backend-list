@@ -1,0 +1,49 @@
+[
+  {
+    "categoria": "De temporada",
+    "importancia": 3,
+    "productos": [
+      {
+        "nombre": "Combo Corona 500gr + Leche Alpina Deslactosada x6",
+        "precio": "$24.500",
+        "precio_alto": "$35.000",
+        "calificacion": 1
+      },
+      {
+        "nombre": "Mr Músculo Antigrasa Repuesto",
+        "precio": "$4.500",
+        "precio_alto": "$7.500",
+        "calificacion": 5
+      }
+    ]
+  },
+  {
+    "categoria": "Los imperdibles",
+    "importancia": 7,
+    "productos": [
+      {
+        "nombre": "Mr Músculo Antigrasa Gatillo",
+        "precio": "$7.200",
+        "precio_alto": "$9.600",
+        "calificacion": 3
+      },
+      {
+        "nombre": "Pato Gel Acción Profunda Aroma Pino",
+        "precio": "$9.100",
+        "precio_alto": "$13.000",
+        "calificacion": 4
+      }
+    ]
+  },
+  {
+    "categoria": "Destacados",
+    "importancia": 8,
+    "productos": [
+      {
+        "nombre": "Pato Tanque Bolsa Azul",
+        "precio": "$4.300",
+        "calificacion": 2
+      }
+    ]
+  }
+]

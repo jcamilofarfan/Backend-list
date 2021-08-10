@@ -1,0 +1,90 @@
+{
+    "categories": [
+        {
+            "id": 803,
+            "name": "Por tiempo limitado",
+            "importance": 1
+        },
+        {
+            "id": 802,
+            "name": "¡Básicos para tu hogar!",
+            "importance": 5
+        },
+        {
+            "id": 801,
+            "name": "Precios bajos siempre",
+            "importance": 10
+        }
+    ],
+    "products": [
+        {
+            "product_data": {                                    
+                "name": "Huevos Oro AA x30",
+                "price": 10900,
+                "rate": 5,
+                "discount": 20,
+                "categories": [
+                    {
+                        "category_id": 801                         
+                    }
+                ],
+                "stock": 1
+            }
+        },
+        {
+            "product_data": {                                    
+                "name": "Papel Higiénico Rosal Triple Hoja x12",
+                "price": 10400,
+                "rate": 1,
+                "discount": 50,
+                "categories": [
+                    {
+                        "category_id": 801                         
+                    }
+                ],
+                "stock": 1
+            }
+        },
+        {
+            "product_data": {                                    
+                "name": "Shampoo Savital Biotina 550ml",
+                "price": 8200,
+                "rate": 2,
+                "discount": 60,
+                "categories": [
+                    {
+                        "category_id": 801                         
+                    }
+                ],
+                "stock": 1
+            }
+        },
+        {
+            "product_data": {                                    
+                "name": "Fríjol Diana Bola Roja 500gr",
+                "price": 4950,
+                "rate": 5,
+                "discount": 30,
+                "categories": [
+                    {
+                        "category_id": 801                         
+                    }
+                ],
+                "stock": 5
+            }
+        },
+        {
+            "product_data": {                                    
+                "name": "H2Oh! Limonata 1500ml",
+                "price": 2700,
+                "rate": 4,
+                "categories": [
+                    {
+                        "category_id": 803                         
+                    }
+                ],
+                "stock": 5
+            }
+        }
+    ]
+}
