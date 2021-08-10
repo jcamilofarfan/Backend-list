@@ -1,15 +1,20 @@
+//get product model
 import { product } from "../models/products";
+//get function to create product
 import { CalcCashDiscount, toNumber, CalcDiscount, CalcRelevance } from "./functions";
 
+//create a list of products
 export const createListProducts = async (array, object) => {
+    //array for relevances
     const acumnRate = [];
     const acumCashDiscount = []
     const acumRelevantCategory = []
 
-    //se genera un array vacio para guardar los objetos
+    //array for list of products
     const info = []
-    //manejo data en array
+    //data transformation from array
     array.forEach(element => {
+        //handel functions from external file
         let products = element.productos;
         if (products.length > 0) {
             for (let i = 0; i < products.length; i++) {
@@ -26,16 +31,18 @@ export const createListProducts = async (array, object) => {
                 const cash_discount = CalcCashDiscount(price, priceUp);
                 acumCashDiscount.push(cash_discount);
                 const discount = CalcDiscount(price, priceUp);
-
                 const newProduct = new product(name, price, discount, cash_discount, rate, category, category_importance);
                 info.push(newProduct)
             }
         }
     });
 
-    //manejo data en objeto
-    const products = object.products
+    //data transformation from object
+    const products = object.products //extract array from object
+    
     products.forEach(productItem => {
+
+        //handel arrow funcions
         const item = productItem.product_data
         const name = item.name;
         const price = item.price;
@@ -87,20 +94,22 @@ export const createListProducts = async (array, object) => {
         info.push(newProduct)
     });
 
-
+        //extract max number of array for relevances
         const maxRate = Math.max.apply(null, acumnRate)
-
         const maxRelevantCategory = Math.max.apply(null, acumRelevantCategory);
-
         const maxCashDiscount = Math.max.apply(null, acumCashDiscount)
 
+        //iterate for each object in array and add relevances
         for(let i = 0; i<info.length; i++){
+            //calculated in external file
             const relevance = CalcRelevance(maxRate , maxRelevantCategory, maxCashDiscount, info[i].rate, info[i].category_importance, info[i].cash_discount);
+            //add relevance
             info[i].relevance = relevance
         }
-
+        //sorted objects by relevance
     info.sort(function (a, b){
         return (b.relevance - a.relevance)
     });
+    //return list of products
     return info;
 }

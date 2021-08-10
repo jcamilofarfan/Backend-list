@@ -1,3 +1,4 @@
+//product model whitout relevance
 export function product (name, price, discount, cash_discount, rate, category, category_importance){
     this.name = name; //string
     this.price = price; //number
